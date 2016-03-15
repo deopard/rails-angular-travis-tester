@@ -45,6 +45,13 @@ module.exports = function(config) {
       }
     },
 
+    customLaunchers: {
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    },
+
     // ngHtml2JsPreprocessor: {
     //   // strip this from the file path
     //   // stripPrefix: '',
@@ -91,10 +98,9 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
-
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: process.env.TRAVIS ? ['Chrome_travis_ci'] : ['Chrome'],
 
 
     // Continuous Integration mode
