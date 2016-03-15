@@ -18,11 +18,13 @@ module.exports = function(config) {
       'vendor/assets/components/angular/angular.min.js',
 
       'app/assets/javascripts/trevi/**/*.js',
+      'app/assets/javascripts/trevi/**/*.es6',
 
 
       'vendor/assets/components/angular-mocks/angular-mocks.js',
 
-      'test.js/**/*.js'
+      'test.js/**/*.js',
+      'test.js/**/*.es6'
     ],
 
 
@@ -36,6 +38,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       // 'app/views/**/*.html': ['ng-html2js']
+      'app/assets/javascripts/trevi/**/*.es6': ['babel'],
       'test.js/**/*.es6': ['babel']
     },
 
