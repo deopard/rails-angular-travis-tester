@@ -9,6 +9,7 @@ cache:
     - trevi/vendor/assets/components
 
 before_script:
+  - 'which chromium-browser'
   - 'cd trevi'
   - 'export CHROME_BIN=chromium-browser'
   - 'export DISPLAY=:99.0'
