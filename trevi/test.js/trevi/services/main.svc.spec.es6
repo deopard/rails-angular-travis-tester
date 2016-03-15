@@ -1,20 +1,20 @@
 (() => {
   'use strict';
-  describe('Main Service', function () {
+  describe('Main Service', () => {
     var MainSvc;
 
     beforeEach(module('trevi'));
-    beforeEach(inject(function (_MainSvc_) {
+    beforeEach(inject((_MainSvc_) => {
       MainSvc = _MainSvc_;
     }));
 
-    describe('Simple tests', function () {
-      it('should have correct inital value', function () {
+    describe('Simple tests', () => {
+      it('should have correct inital value', () => {
         expect(MainSvc.name).toBe('');
         expect(MainSvc.value).toBe(0);
       });
 
-      it('should add properly', function () {
+      it('should add properly', () => {
         MainSvc.addValue();
         expect(MainSvc.value).toBe(1);
 
@@ -25,7 +25,7 @@
         expect(MainSvc.value).toBe(addCount + 1);
       });
 
-      it('should sub properly', function () {
+      it('should sub properly', () => {
         MainSvc.value = 10;
 
         var subCount = 4;
@@ -36,7 +36,7 @@
         expect(MainSvc.value).toBe(10 - subCount);
       });
 
-      it('cant be smaller than 0', function () {
+      it('cant be smaller than 0', () => {
         MainSvc.addValue();
         expect(MainSvc.value).toBe(1);
 
