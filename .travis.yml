@@ -18,7 +18,7 @@ before_script:
   - 'bower install' # install bower packages
 
 after_script:
-  - 'grunt test'
+  - 'npm test'
 
 branches:
   only:
