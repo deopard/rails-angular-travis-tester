@@ -19,7 +19,6 @@ before_script:
   - 'bower install' # install bower packages
 
 after_script:
-  - 'npm test'
 
 branches:
   only:
