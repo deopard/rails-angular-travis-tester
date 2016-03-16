@@ -3,8 +3,9 @@ rvm: 2.2.0
 before_script:
 - bundle install
 before_install:
-  - cd trevi
-  - openssl aes-256-cbc -K $encrypted_288f18f07939_key -iv $encrypted_288f18f07939_iv in config/secrets.yml.enc -out config/secrets.yml -d
+- cd trevi
+- openssl aes-256-cbc -K $encrypted_288f18f07939_key -iv $encrypted_288f18f07939_iv
+  -in config/secrets.yml.enc -out config/secrets.yml -d
 branches:
   only:
   - master
