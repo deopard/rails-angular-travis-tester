@@ -6,10 +6,8 @@ before_script:
   - 'cd trevi'
   - 'bundle install'
 
-env:
-  - SECRET_TOKEN='SECRETTOKENSECRETTOKEN'
-  - SECRET_KEY_BASE='SECRETKEYBASESECRETKEYBASESECRETKEYBASE'
-
+before_install:
+  - 'openssl aes-256-cbc -K $encrypted_e77f5b7e6948_key -iv $encrypted_e77f5b7e6948_iv -in secrets.yml.enc -out config/secrets.yml -d'
 
 # language: node_js
 # sudo: false
