@@ -38,6 +38,7 @@ before_script:
 
 script:
   - bundle exec rake
+  - npm test
 
 after_success:
 
