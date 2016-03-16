@@ -4,6 +4,7 @@ rvm:
 
 before_script:
   - 'cd trevi'
+  - 'bundle install'
 
 
 
