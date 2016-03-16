@@ -4,8 +4,6 @@ before_script:
 - cd trevi
 - bundle install
 before_install:
-- openssl aes-256-cbc -K $encrypted_288f18f07939_key -iv $encrypted_288f18f07939_iv
-  -in secrets.yml.enc -out secrets.yml -d
 - openssl aes-256-cbc -K $encrypted_e77f5b7e6948_key -iv $encrypted_e77f5b7e6948_iv
   -in secrets.yml.enc -out config/secrets.yml -d
 branches:
