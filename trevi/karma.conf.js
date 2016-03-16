@@ -20,7 +20,6 @@ module.exports = function(config) {
       'app/assets/javascripts/trevi/**/*.js',
       'app/assets/javascripts/trevi/**/*.es6',
 
-
       'vendor/assets/components/angular-mocks/angular-mocks.js',
 
       'test.js/**/*.js',

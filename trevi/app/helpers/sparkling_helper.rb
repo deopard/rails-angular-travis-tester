@@ -1,0 +1,2 @@
+module SparklingHelper
+end
