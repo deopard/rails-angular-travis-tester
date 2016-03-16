@@ -21,9 +21,10 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_288f18f07939_key -iv $encrypted_288f18f07939_iv
     -in config/secrets.yml.enc -out config/secrets.yml -d
 
+install:
+
 before_script:
   - bundle install
-  - bundle exec rake
 
   - which chromium-browser
   - export CHROME_BIN=/usr/bin/chromium-browser
@@ -32,6 +33,13 @@ before_script:
   - npm install -g bower karma grunt-cli jshint
   - npm install # install npm packages
   - bower install # install bower packages
+
+script:
+  - bundle exec rake
+
+after_success:
+
+after_failure:
 
 after_script:
 
