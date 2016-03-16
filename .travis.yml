@@ -6,6 +6,9 @@ before_script:
   - 'cd trevi'
   - 'bundle install'
 
+env:
+  - SECRET_TOKEN='SECRETTOKENSECRETTOKEN'
+  - SECRET_KEY_BASE='SECRETKEYBASESECRETKEYBASESECRETKEYBASE'
 
 
 # language: node_js
