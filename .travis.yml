@@ -22,8 +22,10 @@ before_install:
     -in config/secrets.yml.enc -out config/secrets.yml -d
 
 before_script:
-  - which chromium-browser
   - bundle install
+  - bundle exec rake
+
+  - which chromium-browser
   - export CHROME_BIN=/usr/bin/chromium-browser
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
