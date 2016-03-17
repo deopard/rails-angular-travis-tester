@@ -16,7 +16,7 @@ class SparklingHelperTest < ActionView::TestCase
   end
 
   test "the truth fourth" do
-    assert true
+    assert false
   end
 
   test "the truth fifth" do
