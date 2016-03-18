@@ -4,3 +4,5 @@ trevi/bin
 trevi/log
 
 secrets.yml
+
+trevi/config/secrets.tar
